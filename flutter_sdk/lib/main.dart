@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import "passwordwidget.dart";
+import 'carousel.dart';
 
 void main() {
   runApp(const MyApp());
@@ -40,6 +41,7 @@ class _MyHomePageState extends State<MyHomePage> with PasswordStrength {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             TextField(
               onChanged: (value) {
@@ -53,7 +55,8 @@ class _MyHomePageState extends State<MyHomePage> with PasswordStrength {
               valueListenable: passwordUpdate,
               builder: (context, value, child) {
                 return (Column(
-                  children: <Widget>[Text(value), PasswordStrengthWidget()],
+                  //children: <Widget>[PasswordStrengthWidget()],
+                  children: <Widget>[CarouselWidget()],
                 ));
               },
             )
