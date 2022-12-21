@@ -55,8 +55,10 @@ class _MyHomePageState extends State<MyHomePage> with PasswordStrength {
               valueListenable: passwordUpdate,
               builder: (context, value, child) {
                 return (Column(
-                  //children: <Widget>[PasswordStrengthWidget()],
-                  children: <Widget>[CarouselWidget()],
+                  children: <Widget>[
+                    PasswordStrengthWidget(),
+                    CarouselWidget()
+                  ],
                 ));
               },
             )
